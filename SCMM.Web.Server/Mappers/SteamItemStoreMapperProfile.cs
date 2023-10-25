@@ -57,6 +57,7 @@ namespace SCMM.Web.Server.Mappers
                 .ForMember(x => x.MarketPrice, o => o.MapFromUsingCurrencyExchange(p => p.Item.Description.MarketItem != null ? p.Item.Description.MarketItem.SellOrderLowestPrice : null, p => p.Item.Description.MarketItem != null ? p.Item.Description.MarketItem.Currency : null))
                 .ForMember(x => x.MarketSupply, o => o.MapFrom(p => p.Item.Description.MarketItem != null ? (long?)p.Item.Description.MarketItem.SellOrderCount : null))
                 .ForMember(x => x.MarketDemand24hrs, o => o.MapFrom(p => p.Item.Description.MarketItem != null ? (long?)p.Item.Description.MarketItem.Last24hrSales : null))
+                .ForMember(x => x.SupplyEstimationAccuracy, o => o.MapFrom(p => p.Item.Description.SupplyEstimationAccuracy))
                 .ForMember(x => x.SupplyTotalEstimated, o => o.MapFrom(p => p.Item.Description.SupplyTotalEstimated))
                 .ForMember(x => x.Subscriptions, o => o.MapFrom(p => p.Item.Description.SubscriptionsCurrent))
                 .ForMember(x => x.IsCommodity, o => o.MapFrom(p => p.Item.Description.IsCommodity))

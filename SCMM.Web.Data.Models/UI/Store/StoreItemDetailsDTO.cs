@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using SCMM.Shared.Data.Models.Enums;
+using System.Text.Json.Serialization;
 
 namespace SCMM.Web.Data.Models.UI.Store
 {
@@ -83,6 +84,8 @@ namespace SCMM.Web.Data.Models.UI.Store
         public int MarketRankIndex { get; set; }
 
         public int MarketRankTotal { get; set; }
+
+        public EstimatedAccuracyTypes SupplyEstimationAccuracy { get; set; }
 
         public long? SupplyTotalEstimated { get; set; }
 

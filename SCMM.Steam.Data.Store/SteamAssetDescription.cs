@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SCMM.Shared.Data.Models;
+using SCMM.Shared.Data.Models.Enums;
 using SCMM.Shared.Data.Models.Extensions;
 using SCMM.Shared.Data.Store;
 using SCMM.Shared.Data.Store.Types;
@@ -144,6 +145,8 @@ namespace SCMM.Steam.Data.Store
 
         [Required]
         public PersistableMediaDictionary Previews { get; set; }
+
+        public EstimatedAccuracyTypes SupplyEstimationAccuracy { get; set;}
 
         public long? SupplyTotalEstimated { get; set; }
 

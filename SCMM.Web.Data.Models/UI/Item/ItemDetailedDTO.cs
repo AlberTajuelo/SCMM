@@ -1,4 +1,5 @@
 ﻿
+using SCMM.Shared.Data.Models.Enums;
 using SCMM.Steam.Data.Models.Enums;
 
 namespace SCMM.Web.Data.Models.UI.Item
@@ -76,6 +77,8 @@ namespace SCMM.Web.Data.Models.UI.Item
         public string PreviewUrl { get; set; }
 
         public Dictionary<string, SteamMediaType> Previews { get; set; }
+
+        public EstimatedAccuracyTypes SupplyEstimationAccuracy { get; set; }
 
         public long? SupplyTotalEstimated { get; set; }
 
